@@ -1,0 +1,20 @@
+
+  
+  table{
+    font-family: Calibri; 
+    color:white; 
+    font-size: 6pt; 
+    width: 64%;
+    font-style: normal;
+    font-weight: bold;
+    /*text-align:center; */
+    background-color: SlateBlue; 
+    border-collapse: collapse; 
+    border: 2px solid navy;
+    margin-right: 270px;
+    margin-bottom: 30px;
+   
+  }
+  table.inner{
+    border: 0px
+  }

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Report Issue</title>
+  <link rel="stylesheet" href="elec.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 90px 0 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+            z-index: 99;
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                top: 11.5rem;
+                padding: 0;
+            }
+        }
+            
+        .navbar {
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+        }
+
+        @media (min-width: 767.98px) {
+            .navbar {
+                top: 0;
+                position: sticky;
+                z-index: 999;
+            }
+        }
+
+        .sidebar .nav-link {
+            color: #333;
+        }
+
+        .sidebar .nav-link.active {
+            color: #0d6efd;
+        }
+        a {
+            text-decoration: none;
+        }
+        h4 {
+            color: white;
+        }
+    </style>
+</head>
+
+ 
+<body>
+
+    <nav class="navbar navbar-light bg-primary p-3">
+        <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+            <a class="navbar-brand" href="dashboard">
+                <h4>  GOVERNMENT STRATEGICAL PLAN AND ANALYTICAL SYSTEM </h4>
+            </a>
+            <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+       
+        </div>
+        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+            <div class="mr-3 mt-1">
+               
+            </div>
+            <div class="dropdown">
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                
+                  <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+        <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item d-flex flex-column">
+                          <a   class="btn btn-bg btn-primary" href="dashboard">
+                      
+                            <span class="ml-2">Home</span>
+                          </a>
+                          
+                            <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="road">
+                              
+                                <span class="ml-2">Report Roard</span>
+                              </a>
+                            </li>
+                            <br>
+                              <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="elec">
+                           
+                                <span class="ml-2">Report Electricity </span>
+                              </a>
+                            </li>
+                            <br>
+                              <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="courthome">
+                              <span class="ml-2">Report Courts</span>
+                              </a>
+                            </li>
+                            <br>
+                            <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="markets">
+                              <span class="ml-2">Report Market</span>
+                              </a>
+                            </li>
+                            <br>
+                            <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="industrydata">
+                              <span class="ml-2">Report Industry</span>
+                              </a>
+                            </li>
+                            <br>
+                            <li class="nav-item d-flex flex-column">
+                                <a   class="btn btn-bg btn-primary" href="waterhome">
+                              <span class="ml-2">Report Water</span>
+                              </a>
+                            </li>
+                        <hr>
+                        <h6>ISSUES RAISED</h6>
+                        <hr>
+                        <br>
+                        <li class="nav-item d-flex flex-column">
+                            <a   class="btn btn-bg btn-primary" href="roodissue.html">
+                          <span class="ml-2">View Road Issues</span>
+                          </a>
+                        </li>
+
+
+                        <li class="nav-item d-flex flex-column">
+                            <a   class="btn btn-bg btn-primary" href="elecIusse.html">
+                          <span class="ml-2">View Electricity Issues</span>
+                          </a>
+                        </li>
+
+                        <li class="nav-item d-flex flex-column">
+                            <a   class="btn btn-bg btn-primary" href="courtissue.html">
+                          <span class="ml-2">View Court Issues</span>
+                          </a>
+                        </li>
+
+
+                        <li class="nav-item d-flex flex-column">
+                          <a   class="btn btn-bg btn-primary" href="marketIssue.html">
+                        <span class="ml-2">View Market Issues</span>
+                        </a>
+                      </li>
+
+
+                      <li class="nav-item d-flex flex-column">
+                        <a   class="btn btn-bg btn-primary" href="waterIssue.html">
+                      <span class="ml-2">View Water Issues</span>
+                      </a>
+                    </li>
+
+
+                    <li class="nav-item d-flex flex-column">
+                      <a   class="btn btn-bg btn-primary" href="IndustIssue.html">
+                    <span class="ml-2">View Industry Issues</span>
+                    </a>
+                  </li>
+                    
+                    
+                      </ul>
+                </div>
+            </nav>
+
+            <form  method="POST" class="post-form" action="industry">
+              {% csrf_token %}  
+              <h5 style="color: green;">{{success}}</h5>
+<table align="center" cellpadding = "10">
+ 
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="FirstName" maxlength="30"/>
+
+</td>
+</tr>
+ 
+<tr>
+<td>LAST NAME</td>
+<td><input type="text" name="LastName" maxlength="30"/>
+</td>
+</tr>
+ 
+<tr>
+<td>DATE OF BIRTH</td>
+ 
+<td>
+  <input type="date" name="dob">
+ </td>
+</tr>
+ 
+<tr>
+<td>NATIONAL ID</td>
+<td><input type="text" name="nationIdd" maxlength="100" /></td>
+</tr>
+ 
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="MobileNumber" maxlength="10" />
+</td>
+</tr>
+
+<tr>
+<td>GENDAR</td>
+<td>
+Male <input type="radio" name="Gender" value="Male" />
+Female<input type="radio" name="Gender" value="Female" />
+</td>
+</tr>
+ 
+<tr>
+<td>PROVINCE</td>
+<td><input type="text" name="province" maxlength="30" />
+
+</td>
+</tr>
+ 
+<tr>
+<td>DISTRICT</td>
+<td><input type="text" name="district" maxlength="6" />
+</td>
+</tr>
+ 
+<tr>
+<td>SECTOR</td>
+<td><input type="text" name="sector" maxlength="30" />
+
+</td>
+</tr>
+
+<tr>
+<td>CELL</td>
+<td><input type="text" name="cell"   /></td>
+</tr>
+<tr>
+<tr>
+<td>VILLAGE</td>
+<td><input type="text" name="village"   /></td>
+</tr>
+<tr>
+    <td>ISSUE</td>
+<td>
+           
+  POLUTION  <input type="radio" name="roadissue" value="POLUTION" />
+           
+  BAD SMELL <input type="radio" name="roadissue" value="BAD SMELL" />
+           
+  UNCONTROLLED ITS WARER <input type="radio" name="roadissue" value="UNCONTROLLED ITS WARER" />
+      
+    </td>
+    </tr>
+ 
+<tr>
+<td>LEADERS AWARE </td>
+ 
+<td>
+VILLAGE(LEADER)
+<input type="checkbox" name="villageL" value="VILLAGE(LEADER)" />
+CELL(LEADER)
+<input type="checkbox" name="cellL" value="CELL(LEADER)" />
+SECTOR(LEADER)
+<input type="checkbox" name="sectorl" value="SECTOR(LEADER)" />
+DISTRICT(LEADER)
+<input type="checkbox" name="districtL" value="DISTRICT(LEADER)" />
+</td>
+</tr>
+
+<tr>
+<td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+ 
+<td>
+<table>
+ 
+<tr>
+<td align="center"><b>No.</b></td>
+<td align="center"><b></b></td>
+<td align="center"><b>NAME INDUSTRY</b></td>
+<td align="center"><b>LOCATION</b></td>
+<td align="center"><b>TIME NOT BEING WORKING</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td>INDUSTRY DETAILS</td>
+<td><input type="text" name="roadname" maxlength="30" /></td>
+<td><input type="text" name="lenghtroad" maxlength="30" /></td>
+<td><input type="text" name="relatedroad" maxlength="30" /></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>NAMES OF LEADERS</td>
+    <td><input type="text" name="villages" maxlength="30" /></td>
+    <td><input type="text" name="cells" maxlength="30" /></td>
+    <td><input type="text" name="Sector" maxlength="30" /></td>
+    </tr>
+ 
+<tr>
+<td>3</td>
+<td>PHONES NUMBERS</td>
+<td><input type="text" name="phonevillage" maxlength="30" /></td>
+<td><input type="text" name="phonecells" maxlength="30" /></td>
+<td><input type="text" name="phonesector" maxlength="30" /></td>
+</tr>
+</table>
+ 
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+ 
+</form>
+ 
+</body>
+</html>
+  
+</body>
+</html>

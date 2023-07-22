@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        <link rel="stylesheet" href="elec.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
+            padding: 90px 0 0;
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+            z-index: 99;
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                top: 11.5rem;
+                padding: 0;
+            }
+        }
+            
+        .navbar {
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+        }
+
+        @media (min-width: 767.98px) {
+            .navbar {
+                top: 0;
+                position: sticky;
+                z-index: 999;
+            }
+        }
+
+        .sidebar .nav-link {
+            color: #333;
+        }
+
+        .sidebar .nav-link.active {
+            color: #0d6efd;
+        }
+        a {
+            text-decoration: none;
+        }
+        h4 {
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-primary p-3">
+        <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+            <a class="navbar-brand" href="viewdata">
+                <h4>  GOVERNMENT STRATEGICAL PLAN AND ANALYTICAL SYSTEM</h4>
+            </a>
+            <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+       
+        </div>
+        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+            <div class="mr-3 mt-1">
+               
+            </div>
+            <div class="dropdown">
+                
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                
+                  <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+        <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item d-flex flex-column">
+                          <a   class="btn btn-bg btn-primary" href="viewdata">
+                      
+                            <span class="ml-2">Home</span>
+                          </a>
+                   
+                      </ul>
+                </div>
+            </nav>
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
+                 <div class="row">
+                    <div class="col-16 col-xl-14 mb-12 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">List of Reported Issues<h5 style="color: green;"> Total Amount is : {{moneytotal}}</h5></h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                  <div class="container">
+                                    <table class="table table-striped">
+                                        <thead>
+                                          <tr>
+                                            <th>id</th>
+                                        <th>Fnames</th>
+                                        <th>Lname</th>
+                                        <th>NID</th>
+                                        <th>Phone</th>
+                                          <th>Issue</th>
+                                          <th>Status</th>
+                                          <th>Amount</th>
+                                          <th>Action</th>
+                                       
+                                    
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                      {% for emp in retrieveddata %}  
+                                          <tr>
+                                        <td>{{emp.id}}</td>
+                                        <td>{{emp.fname}}</td>
+                                        <td>{{emp.lname}}</td>
+                                        <td>{{emp.NID}}</td>
+                                        <td>{{emp.phone}}</td>
+                                        <td>{{emp.issue}}</td>
+                                        <td>{{ emp.status}}</td>
+                                        <td>500 Frw</td>
+                                        <td><a href="edit/{{ emp.id }}" style="background-color:rgb(255, 145, 0);color: white; text-decoration:none;">CONFIRM</a></td>
+                                        <td><a href="report/{{ emp.id }}"><button class="btn btn-primary">Report</button></a></td>
+                                         </tr>
+                                        {% endfor %} 
+                                      </tbody>
+                                    </table>
+                                             
+                              
+                                
+         
+         </div>                                
+            
+                            </div>
+        
+             </div>
+                 
+                    </div>
+                  
+                </div>
+               
+           </main>
+        </div>
+    </div>
+</body>
+</html>
